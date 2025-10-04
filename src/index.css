@@ -1,0 +1,154 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Cosmic Space Theme */
+    --background: 240 20% 8%;
+    --foreground: 200 100% 95%;
+
+    --card: 240 18% 12%;
+    --card-foreground: 200 100% 95%;
+
+    --popover: 240 18% 10%;
+    --popover-foreground: 200 100% 95%;
+
+    /* Neon Cyan Primary */
+    --primary: 190 100% 50%;
+    --primary-foreground: 240 20% 8%;
+    --primary-glow: 190 100% 65%;
+
+    /* Purple Secondary */
+    --secondary: 280 80% 55%;
+    --secondary-foreground: 200 100% 95%;
+    --secondary-glow: 280 80% 70%;
+
+    --muted: 240 15% 20%;
+    --muted-foreground: 200 20% 65%;
+
+    /* Magenta Accent */
+    --accent: 320 90% 55%;
+    --accent-foreground: 200 100% 95%;
+    --accent-glow: 320 90% 70%;
+
+    --destructive: 0 85% 60%;
+    --destructive-foreground: 200 100% 95%;
+
+    --border: 240 15% 25%;
+    --input: 240 15% 18%;
+    --ring: 190 100% 50%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-cosmic: linear-gradient(135deg, hsl(240 20% 8%), hsl(260 40% 15%), hsl(280 60% 20%));
+    --gradient-nebula: linear-gradient(180deg, hsl(280 80% 35% / 0.3), hsl(190 100% 40% / 0.3));
+    --gradient-primary: linear-gradient(135deg, hsl(190 100% 50%), hsl(200 100% 60%));
+    --gradient-secondary: linear-gradient(135deg, hsl(280 80% 55%), hsl(320 90% 55%));
+    
+    /* Shadows & Glows */
+    --glow-primary: 0 0 20px hsl(190 100% 50% / 0.5);
+    --glow-secondary: 0 0 20px hsl(280 80% 55% / 0.5);
+    --glow-accent: 0 0 20px hsl(320 90% 55% / 0.5);
+    --shadow-elevated: 0 8px 32px hsl(240 20% 5% / 0.6);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    background: var(--gradient-cosmic);
+    background-attachment: fixed;
+  }
+
+  /* Star field effect */
+  body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: 
+      radial-gradient(2px 2px at 20px 30px, white, transparent),
+      radial-gradient(2px 2px at 60px 70px, white, transparent),
+      radial-gradient(1px 1px at 50px 50px, white, transparent),
+      radial-gradient(1px 1px at 130px 80px, white, transparent),
+      radial-gradient(2px 2px at 90px 10px, white, transparent);
+    background-repeat: repeat;
+    background-size: 200px 200px;
+    opacity: 0.3;
+    pointer-events: none;
+    z-index: 0;
+  }
+}
+
+@layer utilities {
+  .glass-card {
+    @apply bg-card/40 backdrop-blur-xl border border-border/50;
+    box-shadow: var(--shadow-elevated), inset 0 1px 1px hsl(200 100% 95% / 0.1);
+  }
+
+  .glow-primary {
+    box-shadow: var(--glow-primary);
+  }
+
+  .glow-secondary {
+    box-shadow: var(--glow-secondary);
+  }
+
+  .glow-accent {
+    box-shadow: var(--glow-accent);
+  }
+
+  .text-glow {
+    text-shadow: 0 0 10px currentColor;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulse-glow {
+    0%, 100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    50% {
+      opacity: 0.8;
+      filter: brightness(1.2);
+    }
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+}
