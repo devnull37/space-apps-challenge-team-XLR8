@@ -58,7 +58,7 @@ export const Footer = () => {
 
         <div className="mt-8 pt-8 border-t border-border/30 text-center text-sm text-muted-foreground">
           <p>© 2025 ExoClassify. Built for NASA Space Apps Challenge.</p>
-          <p className="mt-1">Team: devnull37 (Faris Allafi), Farah Muhssin</p>
+          <p className="mt-1">Team:   Faris Allafi, Farah Muhssin</p>
           <p className="mt-1">Mentor: Mr. Mohamed Salah</p>
           <p className="mt-1">School: Yas American Academy(Aldar Schools Abu Dhabi)</p>
           <p className="mt-1">
