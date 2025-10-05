@@ -80,10 +80,9 @@ export const AboutModel = () => {
                   1
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Data Preprocessing</h4>
+                  <h4 className="font-semibold text-lg mb-1">Data Sourcing & Preprocessing</h4>
                   <p className="text-muted-foreground">
-                    Exoplanet parameters from NASA missions are normalized and feature-engineered 
-                    for optimal model performance.
+                    We begin with publicly available NASA exoplanet data from missions like Kepler. This raw data is meticulously preprocessed, which includes normalizing features by scaling them to a standard range and handling any missing values to ensure the data is clean and consistent for our models.
                   </p>
                 </div>
               </div>
@@ -93,10 +92,9 @@ export const AboutModel = () => {
                   2
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Multi-Model Prediction</h4>
+                  <h4 className="font-semibold text-lg mb-1">Feature Engineering</h4>
                   <p className="text-muted-foreground">
-                    Three independently trained models (Random Forest, XGboost, and, LightGBM) 
-                    each generate probability predictions.
+                    To maximize predictive power, we engineer new features from the existing parameters. This process involves creating meaningful new variables that help the models better distinguish between true exoplanets and false positives, revealing deeper patterns in the data.
                   </p>
                 </div>
               </div>
@@ -106,22 +104,62 @@ export const AboutModel = () => {
                   3
                 </div>
                 <div>
-                  <h4 className="font-semibold text-lg mb-1">Soft Voting Ensemble</h4>
+                  <h4 className="font-semibold text-lg mb-1">Multi-Model Training</h4>
                   <p className="text-muted-foreground">
-                    Probability predictions are averaged across all models, producing a final 
-                    classification with enhanced accuracy and reliability.
+                    We employ a multi-model strategy, independently training three powerful and distinct algorithms:
+                    <br /><br />
+                    Random Forest: An ensemble learning method that constructs a multitude of decision trees
+                    during training and outputs the mode of the classes (classification) or mean prediction (regression)
+                    of the individual trees. It excels at handling complex datasets and is robust against overfitting.
+                    <br /><br />
+                    XGBoost (Extreme Gradient Boosting): An optimized distributed gradient boosting library
+                    designed to be highly efficient, flexible, and portable. It implements machine learning algorithms
+                    under the Gradient Boosting framework. XGBoost provides a parallel tree boosting
+                    (also known as GBDT, GBM) that solves many data science problems in a fast and accurate way.
+                    <br /><br />
+                    LightGBM (Light Gradient Boosting Machine): A gradient boosting framework that uses
+                    tree-based learning algorithms. It is designed to be distributed and efficient,
+                    with faster training speed and higher efficiency, lower memory usage, and better accuracy
+                    compared to other gradient boosting frameworks.
                   </p>
                 </div>
               </div>
-            </div>
 
-            <div className="pt-4 border-t border-border/50">
-              <h4 className="font-semibold text-lg mb-3">Dataset</h4>
-              <p className="text-muted-foreground">
-                Trained on publicly available NASA exoplanet data from the Kepler mission, 
-                containing thousands of confirmed and candidate exoplanets with detailed orbital and 
-                physical parameters.
-              </p>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-secondary flex items-center justify-center text-secondary-foreground font-bold">
+                  4
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Probabilistic Predictions</h4>
+                  <p className="text-muted-foreground">
+                    When presented with a new exoplanet candidate, each of our three trained models independently calculates a probability score. This score represents the model's confidence that the candidate is a confirmed exoplanet versus a false positive.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-primary flex items-center justify-center text-primary-foreground font-bold">
+                  5
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Soft Voting Ensemble</h4>
+                  <p className="text-muted-foreground">
+                    The core of our system is the ensemble method. We use soft voting to combine the outputs of our models. The probability scores from Random Forest, XGBoost, and LightGBM are averaged to produce a single, consolidated probability.
+                  </p>
+                </div>
+              </div>
+
+              <div className="flex gap-4">
+                <div className="flex-shrink-0 w-8 h-8 rounded-full bg-gradient-secondary flex items-center justify-center text-secondary-foreground font-bold">
+                  6
+                </div>
+                <div>
+                  <h4 className="font-semibold text-lg mb-1">Final Classification</h4>
+                  <p className="text-muted-foreground">
+                    The final, averaged probability score determines the classification. By leveraging the diverse strengths of multiple models and mitigating their individual weaknesses, this ensemble approach provides a final classification that is significantly more accurate and reliable than any single model could achieve alone.
+                  </p>
+                </div>
+              </div>
             </div>
           </CardContent>
         </Card>
