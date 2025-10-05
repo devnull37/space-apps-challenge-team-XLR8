@@ -29,7 +29,7 @@ export const Hero = () => {
           {/* Badge */}
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/30">
             <Rocket className="w-4 h-4 text-primary" />
-            <span className="text-sm font-medium text-primary">NASA Space Apps Challenge 2025</span>
+            <span className="text-sm font-medium text-primary">NASA Space Apps Challenge 2025 by Team XLR8</span>
           </div>
 
           {/* Main Heading */}
@@ -41,11 +41,13 @@ export const Hero = () => {
             <span className="text-foreground">Powered by AI</span>
           </h1>
 
-          {/* Description */}
-          <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
-            Advanced multi-model soft voting system for accurate exoplanet detection and classification. 
-            Built for researchers, astronomers, and space enthusiasts.
-          </p>
+            {/* Description */}
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Problem: The discovery of thousands of exoplanets has been made possible by space‑based surveying missions, but most of these detections were done manually. Manual identification is slow, labor‑intensive, and unable to keep pace with the vast amounts of data being generated. This creates a bottleneck in advancing our understanding of exoplanets.
+            </p>
+            <p className="text-xl md:text-2xl text-muted-foreground max-w-2xl mx-auto leading-relaxed">
+            Our Solution: We designed an AI/ML pipeline that can automatically and accurately identify exoplanets from NASA’s open‑source datasets. Our pipeline streamlines the detection process, reduces human error, and enables faster, scalable analysis of large datasets.
+            </p>
 
           {/* Features */}
           <div className="flex flex-wrap justify-center gap-6 text-sm md:text-base">

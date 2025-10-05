@@ -33,8 +33,8 @@ export const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="https://exoplanetarchive.ipac.caltech.edu/" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
-                  NASA Exoplanet Archive
+                <a href="https://www.kaggle.com/datasets/gauravkumar2525/kepler-exoplanet-dataset/data?select=exoplanets_data.csv" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">
+                  NASA Exoplanet Dataset
                 </a>
               </li>
             </ul>
@@ -45,6 +45,7 @@ export const Footer = () => {
           <p>© 2025 ExoClassify. Built for NASA Space Apps Challenge.</p>
           <p className="mt-1">Team: devnull37 (Faris Allafi), Farah Muhssin</p>
           <p className="mt-1">Mentor: Mr. Mohamed Salah</p>
+          <p className="mt-1">School: Yas American Academy(Aldar Schools Abu Dhabi)</p>
           <p className="mt-1">Dataset: <a href="https://www.kaggle.com/datasets/gauravkumar2525/kepler-exoplanet-dataset/data?select=exoplanets_data.csv" target="_blank" rel="noopener noreferrer" className="hover:text-primary">Kepler Exoplanet Dataset (Kaggle)</a></p>
         </div>
       </div>
