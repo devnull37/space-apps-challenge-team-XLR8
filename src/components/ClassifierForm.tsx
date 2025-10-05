@@ -34,7 +34,7 @@ interface ClassifierFormProps {
 export const ClassifierForm = ({ onClassificationResult }: ClassifierFormProps) => {
   const [isLoading, setIsLoading] = useState(false);
   const [isInitialized, setIsInitialized] = useState(false);
-  const [selectedAvailableFile, setSelectedAvailableFile] = useState<string | null>(null);
+  const [selectedAvailableFile, setSelectedAvailableFile] = useState<string | null>("confirmed.csv");
   const [formData, setFormData] = useState<FormData>({
     koi_period: "",
     koi_duration: "",
@@ -224,7 +224,7 @@ export const ClassifierForm = ({ onClassificationResult }: ClassifierFormProps) 
             <CardDescription>Choose your preferred input method</CardDescription>
           </CardHeader>
           <CardContent>
-            <Tabs defaultValue="upload" className="w-full">
+            <Tabs defaultValue="available" className="w-full">
               <TabsList className="grid w-full grid-cols-3 bg-muted/50">
                 <TabsTrigger value="manual">Manual Entry</TabsTrigger>
                 <TabsTrigger value="upload">Upload CSV</TabsTrigger>
