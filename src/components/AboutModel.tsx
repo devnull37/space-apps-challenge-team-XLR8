@@ -82,7 +82,7 @@ export const AboutModel = () => {
                 <div>
                   <h4 className="font-semibold text-lg mb-1">Data Sourcing & Preprocessing</h4>
                   <p className="text-muted-foreground">
-                    We begin with publicly available NASA exoplanet data from missions like Kepler. This raw data is meticulously preprocessed, which includes normalizing features by scaling them to a standard range and handling any missing values to ensure the data is clean and consistent for our models.
+                    We begin with publicly available NASA exoplanet data from missions like Kepler. This raw data is preprocessed, which includes normalizing features by scaling them to a standard range and handling any missing values to ensure the data is clean and consistent for our models.
                   </p>
                 </div>
               </div>
