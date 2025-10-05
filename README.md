@@ -63,6 +63,11 @@ This project is a web application designed to classify exoplanets using machine 
 └── ...other config files
 ```
 
+## Training Code
+
+The machine learning models used in this project were trained using the code available on Kaggle:
+[https://www.kaggle.com/code/farisallafi/space-apps-challenge-team-xlr8](https://www.kaggle.com/code/farisallafi/space-apps-challenge-team-xlr8)
+
 ## License
 
 This project is licensed under the Apache License 2.0.
