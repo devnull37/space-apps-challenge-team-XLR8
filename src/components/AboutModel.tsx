@@ -220,7 +220,7 @@ export const AboutModel = () => {
             <div className="pt-4 border-t border-border/50">
               <h4 className="font-semibold text-lg mb-3">Dataset</h4>
               <p className="text-muted-foreground">
-                Trained on publicly available NASA exoplanet data from the Kepler, K2, and TESS missions, 
+                Trained on publicly available NASA exoplanet data from the Kepler mission, 
                 containing thousands of confirmed and candidate exoplanets with detailed orbital and 
                 physical parameters.
               </p>
