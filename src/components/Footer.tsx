@@ -34,7 +34,7 @@ export const Footer = () => {
               </li>
               <li>
                 <a
-                  href="https://kaggle.com/datasets/arashnic/exoplanets"
+                  href="https://www.kaggle.com/datasets/arashnic/exoplanets"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hover:text-primary transition-colors"
@@ -54,7 +54,7 @@ export const Footer = () => {
           <p className="mt-1">
             Dataset:{" "}
             <a
-              href="https://kaggle.com/datasets/arashnic/exoplanets"
+              href="https://www.kaggle.com/datasets/arashnic/exoplanets"
               target="_blank"
               rel="noopener noreferrer"
               className="hover:text-primary"

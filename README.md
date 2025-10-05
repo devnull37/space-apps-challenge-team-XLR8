@@ -8,6 +8,7 @@ This project was developed by **Team XLR8** for the **NASA Space Apps Challenge 
 *   Farah Muhssin
 *   Mentor: Mr. Mohamed Salah
 
+
 **School:** Yas American Academy (Aldar Schools Abu Dhabi)
 
 This project is a web application designed to classify exoplanets using machine learning models. It's built with React, Vite, and TypeScript, and leverages Shadcn UI for a modern and responsive user interface.
