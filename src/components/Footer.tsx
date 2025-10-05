@@ -42,6 +42,16 @@ export const Footer = () => {
                   NASA Exoplanet Dataset
                 </a>
               </li>
+              <li>
+                <a
+                  href="https://github.com/devnull37/space-apps-challenge-team-XLR8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:text-primary transition-colors"
+                >
+                  Source Code
+                </a>
+              </li>
             </ul>
           </div>
         </div>

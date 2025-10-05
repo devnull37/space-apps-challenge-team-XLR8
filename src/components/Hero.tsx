@@ -30,6 +30,14 @@ export const Hero = () => {
           <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-primary/30">
             <Rocket className="w-4 h-4 text-primary" />
             <span className="text-sm font-medium text-primary">NASA Space Apps Challenge 2025 by Team XLR8</span>
+            <a
+              href="https://github.com/devnull37/space-apps-challenge-team-XLR8"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-sm font-medium text-primary hover:underline ml-4"
+            >
+              Source Code
+            </a>
           </div>
 
           {/* Main Heading */}
